@@ -1,0 +1,10 @@
+image: firecyberice/alpine:3.5
+manifests:
+  - image: firecyberice/alpine:amd64-3.5
+    platform:
+      architecture: amd64
+      os: linux
+  - image: firecyberice/alpine:arm-3.5
+    platform:
+      architecture: arm
+      os: linux
