@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# build docker images
+
+chmod +x build
+./build

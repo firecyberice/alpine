@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# tag and push correct image names
+
+echo "=> tag image"
+docker tag alpine:3.5 firecyberice/alpine:amd64-3.5
+docker tag alpine-armhf:3.5 firecyberice/alpine:arm-3.5
+
+echo "=> push image"
+docker push firecyberice/alpine:amd64-3.5
+docker push firecyberice/alpine:arm-3.5
+
+echo "=> create image for ci push"
+echo -e "FROM scratch\n LABEL EMPTY_IMAGE='dummy image for CI build'" | docker build -t $IMAGE_NAME -
+
