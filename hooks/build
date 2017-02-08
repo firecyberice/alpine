@@ -4,3 +4,8 @@
 
 chmod +x build
 ./build
+
+echo "=> create image for ci push"
+docker build -t $IMAGE_NAME .
+
+

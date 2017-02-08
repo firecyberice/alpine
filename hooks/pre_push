@@ -10,6 +10,3 @@ echo "=> push image"
 docker push firecyberice/alpine:amd64-3.5
 docker push firecyberice/alpine:arm-3.5
 
-echo "=> create image for ci push"
-echo -e "FROM scratch\n LABEL EMPTY_IMAGE='dummy image for CI build'" | docker build -t $IMAGE_NAME -
-
